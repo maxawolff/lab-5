@@ -83,17 +83,18 @@ function sumArray(testArray){ //eslint-disable-line
   var total = 0;
   var count = testArray.length;
   var passedNums = '';
-  var firstOut = 'was passed in as an array of numbers, and a ';
+  var firstOut = ' was passed in as an array of numbers, and ';
   var secondOut = ' is their sum.';
   for(var i = 0; i < count; i ++){
     var temp = sum(total, testArray[i]);
     total = temp[0];
-    passedNums += (testArray[i] + ', ');
+    passedNums += (testArray[i] + ',');
   }
-  var secondElement = passedNums + firstOut + total + secondOut;
+  var correctFirst = passedNums.slice(0,5);
+  var secondElement = correctFirst + firstOut + total + secondOut;
   result = [total, secondElement];
+  console.log(result);
   return result;
-  //console.log(result);
 }
 
 //console.log('this should be the correct output');
