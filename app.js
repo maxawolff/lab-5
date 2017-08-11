@@ -48,8 +48,11 @@ Test this function by hand in the console to get it working, and when you think 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   var sum1 = sum(a, b);
+  var sum1 = sum1[0];
   var sum2 = sum(sum1, c);
+  var sum2 = sum2[0];
   return sum2;
+
 }
 console.log('The expected output is 16');
 console.log(sumAndMultiply(4,7,5));
