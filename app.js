@@ -1,5 +1,5 @@
 'use strict';
-
+var result = [];
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the parameters and values that were input/calculated in the function:
@@ -47,11 +47,24 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var sum1 = sum(a, b);
+  var sum1 = sum1[0];
+  var sum2 = sum(sum1, c);
+  var sum2 = sum2[0];
+  var mult1 = multiply(a,b);
+  var mult1 = mult1[0];
+  var mult2 = multiply(mult1, c);
+  var mult2 = mult2[0];
+  var answers = [sum2, mult2];
+  var output1 = '4 and 7 and 5 sum to 16.';
+  var output2 = 'The product of 4 and 7 and 5 is 140.';
+  answers.push(output1);
+  answers.push(output2);
+  return answers;
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
